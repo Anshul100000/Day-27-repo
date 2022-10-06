@@ -1,0 +1,39 @@
+package com.bridgelab;
+
+public class Contact {
+    private String firstName;
+    private String lastName;
+    private long phoneNumber;
+
+    Contact(String fname,String lname,long phno)
+    {
+        firstName=fname;
+        lastName=lname;
+        phoneNumber=phno;
+
+    }
+    void setFirstName()
+    {
+        this.firstName=firstName;
+    }
+    void setLastName()
+    {
+        this.lastName=lastName;
+    }
+
+    String getFirstName()
+    {
+        return firstName;
+    }
+    String getLastName()
+    {
+        return lastName;
+    }
+
+
+    @Override
+    public int compareTo(Contact o)
+    {
+        return getFirstName().compareTo(o.getFirstName());
+    }
+}
